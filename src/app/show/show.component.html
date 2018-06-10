@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of tableData">
+      <td>{{d.id}}</td>
+      <td>{{d.title}}</td>
+      <td>{{d.author}}</td>
+      <td><button class="btn btn-danger btn-block" (click)="deleteData(d.id)">Delete</button></td>
+      <td><a [routerLink]="['/edit',d.id]" class="btn btn-primary btn-block" (click)="editData(d.id)">Edit</a></td>
+    </tr>
+  </tbody>
+</table>

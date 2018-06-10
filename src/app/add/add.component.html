@@ -1,0 +1,8 @@
+<div class="col-sm-6">
+  <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+    <input placeholder="title" class="form-control" name="title" ngModel>
+    <input placeholder="author" class="form-control" name="author" ngModel>
+    <button type="submit">Submit</button>
+  </form>
+  <p>{{status}}</p>
+</div>
